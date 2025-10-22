@@ -13,7 +13,6 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public class Room {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -46,5 +45,6 @@ public class Room {
 
     @UpdateTimestamp
     private LocalDateTime updatedAt;
+
 
 }

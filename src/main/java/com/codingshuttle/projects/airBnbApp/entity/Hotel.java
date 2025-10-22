@@ -14,7 +14,6 @@ import java.util.List;
 @Setter
 @Table(name = "hotel")
 public class Hotel {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -41,5 +40,14 @@ public class Hotel {
 
     @Column(nullable = false)
     private Boolean active;
+
+//    @OneToMany(mappedBy = "hotel", fetch = FetchType.LAZY)
+//    private List<Room> rooms;
+
+    @ManyToOne
+    private User owner;
+
+    @OneToMany(mappedBy = "hotel")
+    private List<Room> rooms;
 
 }
