@@ -51,5 +51,4 @@ public class Hotel {
     @OneToMany(mappedBy = "hotel")
     @JsonIgnore
     private List<Room> rooms;
-
 }
